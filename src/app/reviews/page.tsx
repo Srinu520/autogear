@@ -22,7 +22,7 @@ export default function ReviewsPage() {
             {business.rating} star ({business.reviewCount} reviews)
           </p>
           <div className="mt-6">
-            <CtaGroup showNotes />
+            <CtaGroup showNotes whatsappSource="Reviews hero CTA" />
           </div>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function ReviewsPage() {
               Directions and quick contact
             </h2>
             <p className="text-gray-400">{business.address}</p>
-            <CtaGroup showNotes />
+            <CtaGroup showNotes whatsappSource="Reviews directions block" />
           </div>
           <iframe
             className="h-80 w-full rounded-2xl border border-white/10"

@@ -1,3 +1,29 @@
+export const whatsappNumber = "919986641886";
+
+export const buildWhatsappMessage = ({
+  source,
+  category,
+  service,
+}: {
+  source: string;
+  category?: string;
+  service?: string;
+}) => {
+  const parts = [
+    "Hi, I want a quote.",
+    category ? `Category: ${category}.` : null,
+    service ? `Service: ${service}.` : null,
+    `Source: ${source}.`,
+    "Car model: [your car model].",
+    "Details: [brief requirement].",
+  ].filter(Boolean);
+
+  return parts.join(" ");
+};
+
+export const buildWhatsappHref = (message: string) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 export const business = {
   name: "Auto Accessories Store",
   category: "Auto Accessories Store",
@@ -10,7 +36,9 @@ export const business = {
   phoneDisplay: "+91 9986641886",
   phoneHref: "tel:+919986641886",
   whatsappDisplay: "+91 9986641886",
-  whatsappHref: "https://wa.me/919986641886",
+  whatsappHref: buildWhatsappHref(
+    buildWhatsappMessage({ source: "General inquiry" })
+  ),
   mapQuery:
     "VMS Building, 80, Varthur Road, Circle, Dommasandra, Bengaluru, Karnataka 562125",
   openStatus: "Open now",

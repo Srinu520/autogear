@@ -1,19 +1,32 @@
-import { business, mapHref } from "@/lib/siteData";
+import { buildWhatsappHref, buildWhatsappMessage, business, mapHref } from "@/lib/siteData";
 import { ButtonLink } from "./ButtonLink";
 
 type CtaGroupProps = {
   className?: string;
   compact?: boolean;
   showNotes?: boolean;
+  whatsappSource?: string;
+  whatsappCategory?: string;
+  whatsappService?: string;
 };
 
 export function CtaGroup({
   className = "",
   compact = false,
   showNotes = false,
+  whatsappSource = "General inquiry",
+  whatsappCategory,
+  whatsappService,
 }: CtaGroupProps) {
   const callDisabled = business.phoneDisplay === "Needs confirmation";
   const whatsappDisabled = business.whatsappDisplay === "Needs confirmation";
+  const whatsappHref = buildWhatsappHref(
+    buildWhatsappMessage({
+      source: whatsappSource,
+      category: whatsappCategory,
+      service: whatsappService,
+    })
+  );
 
   return (
     <div
@@ -28,7 +41,7 @@ export function CtaGroup({
         Call Now
       </ButtonLink>
       <ButtonLink
-        href={business.whatsappHref}
+        href={whatsappHref}
         variant="secondary"
         disabled={whatsappDisabled}
         note={showNotes && whatsappDisabled ? "Needs confirmation" : undefined}

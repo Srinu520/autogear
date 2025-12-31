@@ -1,4 +1,10 @@
-import { business, faqs, mapHref } from "@/lib/siteData";
+import {
+  buildWhatsappHref,
+  buildWhatsappMessage,
+  business,
+  faqs,
+  mapHref,
+} from "@/lib/siteData";
 import { CtaGroup } from "@/components/CtaGroup";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CopyButton } from "@/components/CopyButton";
@@ -25,7 +31,7 @@ export default function ContactPage() {
           </h1>
           <p className="mt-4 text-gray-400">We are open {business.hours}.</p>
           <div className="mt-6">
-            <CtaGroup showNotes />
+            <CtaGroup showNotes whatsappSource="Contact hero CTA" />
           </div>
         </div>
       </section>
@@ -95,7 +101,12 @@ export default function ContactPage() {
                 </p>
                 <div className="mt-4">
                   <ButtonLink
-                    href={business.whatsappHref}
+                    href={buildWhatsappHref(
+                      buildWhatsappMessage({
+                        source: "Contact page WhatsApp card",
+                        category: "Contact",
+                      })
+                    )}
                     variant="secondary"
                     disabled={whatsappDisabled}
                     note={whatsappDisabled ? "Needs confirmation" : undefined}

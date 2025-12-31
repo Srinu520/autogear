@@ -1,5 +1,7 @@
 import Image from "next/image";
 import {
+  buildWhatsappHref,
+  buildWhatsappMessage,
   business,
   heroImage,
   trustChips,
@@ -53,7 +55,7 @@ export default function Home() {
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <CtaGroup showNotes />
+              <CtaGroup showNotes whatsappSource="Home hero CTA" />
             </Reveal>
           </div>
           <Reveal className="outline-card relative rounded-3xl border border-sky-500/30 p-6">
@@ -186,7 +188,13 @@ export default function Home() {
                     Result: {item.result}
                   </p>
                   <ButtonLink
-                    href={business.whatsappHref}
+                    href={buildWhatsappHref(
+                      buildWhatsappMessage({
+                        source: "Home featured upgrade",
+                        category: "Featured upgrade",
+                        service: item.title,
+                      })
+                    )}
                     variant="secondary"
                     disabled={whatsappDisabled}
                     note={whatsappDisabled ? "Needs confirmation" : undefined}
@@ -339,7 +347,7 @@ export default function Home() {
             <p className="text-gray-400">{business.address}</p>
             <CopyButton text={business.address} />
             <p className="text-sm text-gray-500">Open {business.hours}</p>
-            <CtaGroup showNotes />
+            <CtaGroup showNotes whatsappSource="Home location snapshot" />
           </div>
           <iframe
             className="h-80 w-full rounded-2xl border border-white/10"
