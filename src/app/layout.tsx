@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileActionBar } from "@/components/MobileActionBar";
 import { OpenNowBadge } from "@/components/OpenNowBadge";
 
-const fraunces = Fraunces({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const manrope = Manrope({
+const ibmPlex = IBM_Plex_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -34,10 +35,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fraunces.variable} ${manrope.variable}`}>
+      <body
+        className={`${spaceGrotesk.variable} ${ibmPlex.variable} font-body`}
+      >
         <SiteHeader />
         <OpenNowBadge />
-        <main>{children}</main>
+        <main className="min-h-screen pb-16 md:pb-0 bg-lines-soft">
+          {children}
+        </main>
         <SiteFooter />
         <MobileActionBar />
       </body>

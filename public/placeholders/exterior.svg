@@ -1,0 +1,11 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0B0B0B"/>
+  <rect x="32" y="32" width="1136" height="736" rx="28" stroke="#1F1F1F" stroke-width="2"/>
+  <path d="M32 140H1168" stroke="#1F1F1F" stroke-width="2"/>
+  <path d="M32 660H1168" stroke="#1F1F1F" stroke-width="2"/>
+  <path d="M96 180H1104" stroke="#38BDF8" stroke-width="2"/>
+  <text x="96" y="300" fill="#F3F4F6" font-family="Arial" font-size="38">Exterior Accessories</text>
+  <text x="96" y="352" fill="#9CA3AF" font-family="Arial" font-size="18">Placeholder image</text>
+  <text x="96" y="660" fill="#38BDF8" font-family="Arial" font-size="14">Replace with real photo</text>
+</svg>
+

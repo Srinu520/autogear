@@ -7,10 +7,10 @@ export const business = {
     "VMS Building, 80, Varthur Road, Circle, Dommasandra, Bengaluru, Karnataka 562125",
   addressShort: "Varthur Road Circle, Dommasandra",
   hours: "10:30 AM - 8:30 PM",
-  phoneDisplay: "Needs confirmation",
-  phoneHref: "tel:",
-  whatsappDisplay: "Needs confirmation",
-  whatsappHref: "https://wa.me/",
+  phoneDisplay: "+91 9986641886",
+  phoneHref: "tel:+919986641886",
+  whatsappDisplay: "+91 9986641886",
+  whatsappHref: "https://wa.me/919986641886",
   mapQuery:
     "VMS Building, 80, Varthur Road, Circle, Dommasandra, Bengaluru, Karnataka 562125",
   openStatus: "Open now",
@@ -19,6 +19,8 @@ export const business = {
     { label: "Facebook (Needs confirmation)", href: "#" },
   ],
 };
+
+export const heroImage = "/placeholders/hero.svg";
 
 export const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   business.mapQuery
@@ -33,7 +35,7 @@ export const navLinks = [
 ];
 
 export const trustChips = [
-  "4.7\u2605 (212 Reviews)",
+  "4.7 star (212 reviews)",
   "Same-day interior work (when feasible)",
   "Honest recommendations",
   "Electrical & system repairs",
@@ -44,31 +46,37 @@ export const servicesPreview = [
     title: "Infotainment Installation",
     description: "Clean fitting with basic setup and checks.",
     href: "/services#infotainment",
+    image: "/placeholders/infotainment.svg",
   },
   {
     title: "Interior Works",
     description: "Seat covers, mats, steering cover, interior upgrades.",
     href: "/services#interior",
+    image: "/placeholders/interior.svg",
   },
   {
     title: "Lighting Upgrades",
     description: "Headlamp, fog lamp, and HID setups with alignment.",
     href: "/services#lighting",
+    image: "/placeholders/lighting.svg",
   },
   {
     title: "Exterior Accessories",
     description: "Rain visor, bumper protector, and practical add-ons.",
     href: "/services#exterior",
+    image: "/placeholders/exterior.svg",
   },
   {
     title: "Audio Systems",
     description: "Audio accessories installation and testing.",
     href: "/services#audio",
+    image: "/placeholders/audio.svg",
   },
   {
     title: "Electrical Repair",
     description: "Diagnosis and repair of electrical items.",
     href: "/services#repair",
+    image: "/placeholders/repair.svg",
   },
 ];
 
@@ -79,6 +87,7 @@ export const featuredUpgrades = [
     upgrade: "Yuemi unit installed with basic setup and post-install checks.",
     result: "Yuemi infotainment performance is too good and installed very well.",
     cta: "Ask on WhatsApp",
+    image: "/placeholders/infotainment.svg",
   },
   {
     title: "Interior Combo Upgrade (Seat covers + mats + steering cover)",
@@ -86,6 +95,7 @@ export const featuredUpgrades = [
     upgrade: "Bucket-fitted seat covers, mats, and steering cover.",
     result: "Neat finishing with same-day work when feasible.",
     cta: "Ask on WhatsApp",
+    image: "/placeholders/interior.svg",
   },
   {
     title: "Fog Lamp Upgrade (Hi-Low projector + HID)",
@@ -93,6 +103,7 @@ export const featuredUpgrades = [
     upgrade: "AES Hi-Low projector with HID setup and beam alignment.",
     result: "Clean lighting handled by a calm, knowledgeable mechanic.",
     cta: "Ask on WhatsApp",
+    image: "/placeholders/lighting.svg",
   },
 ];
 
@@ -116,41 +127,49 @@ export const galleryItems = [
     id: "infotainment-1",
     title: "Infotainment install - clean fitment",
     category: "Infotainment",
+    image: "/placeholders/infotainment.svg",
   },
   {
     id: "interior-1",
     title: "Bucket-fitted seat covers",
     category: "Interior",
+    image: "/placeholders/interior.svg",
   },
   {
     id: "lighting-1",
     title: "Fog lamp upgrade with alignment",
     category: "Lighting",
+    image: "/placeholders/lighting.svg",
   },
   {
     id: "accessories-1",
     title: "Rain visor fitted",
     category: "Accessories",
+    image: "/placeholders/exterior.svg",
   },
   {
     id: "repair-1",
     title: "Electrical repair diagnosis",
     category: "Repair",
+    image: "/placeholders/repair.svg",
   },
   {
     id: "interior-2",
     title: "Floor mats fitting",
     category: "Interior",
+    image: "/placeholders/interior.svg",
   },
   {
     id: "lighting-2",
     title: "Headlamp upgrade check",
     category: "Lighting",
+    image: "/placeholders/lighting.svg",
   },
   {
     id: "accessories-2",
     title: "Rear bumper protector",
     category: "Accessories",
+    image: "/placeholders/exterior.svg",
   },
 ];
 
@@ -217,6 +236,7 @@ export const servicesCatalog = [
     id: "infotainment",
     title: "Infotainment & In-Car Tech",
     intro: "Clean fitting with basic setup and post-install checks.",
+    image: "/placeholders/infotainment.svg",
     items: [
       {
         name: "Infotainment System Installation (Yuemi supported)",
@@ -233,6 +253,7 @@ export const servicesCatalog = [
     id: "interior",
     title: "Interior Works",
     intro: "Neat finishing with bucket fitting and same-day capability.",
+    image: "/placeholders/interior.svg",
     items: [
       {
         name: "Seat Covers Installation (Bucket fitting)",
@@ -266,6 +287,7 @@ export const servicesCatalog = [
     id: "lighting",
     title: "Lighting Upgrades",
     intro: "Upgrade lights with alignment checks and clean installation.",
+    image: "/placeholders/lighting.svg",
     items: [
       {
         name: "Headlamp Upgrade or Replacement (100W mentioned)",
@@ -291,6 +313,7 @@ export const servicesCatalog = [
     id: "exterior",
     title: "Exterior Accessories",
     intro: "Practical exterior add-ons installed neatly.",
+    image: "/placeholders/exterior.svg",
     items: [
       {
         name: "Rain Visor",
@@ -316,6 +339,7 @@ export const servicesCatalog = [
     id: "audio",
     title: "Audio Systems",
     intro: "Audio upgrades installed with testing.",
+    image: "/placeholders/audio.svg",
     items: [
       {
         name: "Audio System Upgrades",
@@ -335,6 +359,7 @@ export const servicesCatalog = [
     id: "repair",
     title: "Electrical Repair & Diagnostics",
     intro: "Speciality in repair of car systems and electrical items.",
+    image: "/placeholders/repair.svg",
     items: [
       {
         name: "Electrical and System Repair",
@@ -349,6 +374,7 @@ export const servicesCatalog = [
     id: "packages",
     title: "Upgrade Packages",
     intro: "Bundled upgrades for new cars and refreshes.",
+    image: "/placeholders/infotainment.svg",
     items: [
       {
         name: "New Car Upgrade Package",
@@ -376,7 +402,22 @@ export const servicesCatalog = [
 ];
 
 export const beforeAfterShowcase = [
-  { title: "Infotainment install", category: "Infotainment" },
-  { title: "Interior combo upgrade", category: "Interior" },
-  { title: "Fog lamp upgrade", category: "Lighting" },
+  {
+    title: "Infotainment install",
+    category: "Infotainment",
+    beforeImage: "/placeholders/before.svg",
+    afterImage: "/placeholders/after.svg",
+  },
+  {
+    title: "Interior combo upgrade",
+    category: "Interior",
+    beforeImage: "/placeholders/before.svg",
+    afterImage: "/placeholders/after.svg",
+  },
+  {
+    title: "Fog lamp upgrade",
+    category: "Lighting",
+    beforeImage: "/placeholders/before.svg",
+    afterImage: "/placeholders/after.svg",
+  },
 ];

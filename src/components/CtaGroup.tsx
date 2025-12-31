@@ -16,7 +16,9 @@ export function CtaGroup({
   const whatsappDisabled = business.whatsappDisplay === "Needs confirmation";
 
   return (
-    <div className={`cta-group ${compact ? "cta-group--compact" : ""} ${className}`}>
+    <div
+      className={`flex flex-wrap items-center gap-3 ${compact ? "text-sm" : ""} ${className}`}
+    >
       <ButtonLink
         href={business.phoneHref}
         variant="primary"

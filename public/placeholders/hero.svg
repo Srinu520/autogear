@@ -1,0 +1,11 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" fill="#0B0B0B"/>
+  <rect x="40" y="40" width="1320" height="820" rx="36" stroke="#1F1F1F" stroke-width="2"/>
+  <path d="M40 160H1360" stroke="#1F1F1F" stroke-width="2"/>
+  <path d="M40 720H1360" stroke="#1F1F1F" stroke-width="2"/>
+  <path d="M120 200H1280" stroke="#38BDF8" stroke-width="2"/>
+  <text x="120" y="320" fill="#F3F4F6" font-family="Arial" font-size="44">Hero Install Scene</text>
+  <text x="120" y="380" fill="#9CA3AF" font-family="Arial" font-size="20">Placeholder image</text>
+  <text x="120" y="720" fill="#38BDF8" font-family="Arial" font-size="16">Replace with real photo</text>
+</svg>
+
