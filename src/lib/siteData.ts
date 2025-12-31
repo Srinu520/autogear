@@ -24,6 +24,22 @@ export const buildWhatsappMessage = ({
 export const buildWhatsappHref = (message: string) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
+type ServiceItem = {
+  name: string;
+  includes: string[];
+  recommendedFor: string[];
+  cta: string;
+  notes?: string;
+};
+
+type ServiceSection = {
+  id: string;
+  title: string;
+  intro: string;
+  image: string;
+  items: ServiceItem[];
+};
+
 export const business = {
   name: "Auto Accessories Store",
   category: "Auto Accessories Store",
@@ -48,7 +64,35 @@ export const business = {
   ],
 };
 
-export const heroImage = "/placeholders/hero.svg";
+const imageLibrary = {
+  hero: "/images/hero.jpg",
+  infotainment: "/images/infotainment.jpg",
+  interior: "/images/interior.jpg",
+  lighting: "/images/lighting.jpg",
+  exterior: "/images/exterior.jpg",
+  audio: "/images/audio.jpg",
+  repair: "/images/repair.jpg",
+  packages: "/images/packages.jpg",
+  featuredInfotainment: "/images/featuredInfotainment.jpg",
+  featuredInterior: "/images/featuredInterior.jpg",
+  featuredLighting: "/images/featuredLighting.jpg",
+  galleryInfotainment: "/images/galleryInfotainment.jpg",
+  galleryInterior: "/images/galleryInterior.jpg",
+  galleryLighting: "/images/galleryLighting.jpg",
+  galleryAccessories: "/images/galleryAccessories.jpg",
+  galleryRepair: "/images/galleryRepair.jpg",
+  galleryInteriorAlt: "/images/galleryInteriorAlt.jpg",
+  galleryLightingAlt: "/images/galleryLightingAlt.jpg",
+  galleryAccessoriesAlt: "/images/galleryAccessoriesAlt.jpg",
+  beforeInfotainment: "/images/beforeInfotainment.jpg",
+  afterInfotainment: "/images/afterInfotainment.jpg",
+  beforeInterior: "/images/beforeInterior.jpg",
+  afterInterior: "/images/afterInterior.jpg",
+  beforeLighting: "/images/beforeLighting.jpg",
+  afterLighting: "/images/afterLighting.jpg",
+};
+
+export const heroImage = imageLibrary.hero;
 
 export const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   business.mapQuery
@@ -74,37 +118,37 @@ export const servicesPreview = [
     title: "Infotainment Installation",
     description: "Clean fitting with basic setup and checks.",
     href: "/services#infotainment",
-    image: "/placeholders/infotainment.svg",
+    image: imageLibrary.infotainment,
   },
   {
     title: "Interior Works",
     description: "Seat covers, mats, steering cover, interior upgrades.",
     href: "/services#interior",
-    image: "/placeholders/interior.svg",
+    image: imageLibrary.interior,
   },
   {
     title: "Lighting Upgrades",
     description: "Headlamp, fog lamp, and HID setups with alignment.",
     href: "/services#lighting",
-    image: "/placeholders/lighting.svg",
+    image: imageLibrary.lighting,
   },
   {
     title: "Exterior Accessories",
     description: "Rain visor, bumper protector, and practical add-ons.",
     href: "/services#exterior",
-    image: "/placeholders/exterior.svg",
+    image: imageLibrary.exterior,
   },
   {
     title: "Audio Systems",
     description: "Audio accessories installation and testing.",
     href: "/services#audio",
-    image: "/placeholders/audio.svg",
+    image: imageLibrary.audio,
   },
   {
     title: "Electrical Repair",
     description: "Diagnosis and repair of electrical items.",
     href: "/services#repair",
-    image: "/placeholders/repair.svg",
+    image: imageLibrary.repair,
   },
 ];
 
@@ -115,7 +159,7 @@ export const featuredUpgrades = [
     upgrade: "Yuemi unit installed with basic setup and post-install checks.",
     result: "Yuemi infotainment performance is too good and installed very well.",
     cta: "Ask on WhatsApp",
-    image: "/placeholders/infotainment.svg",
+    image: imageLibrary.featuredInfotainment,
   },
   {
     title: "Interior Combo Upgrade (Seat covers + mats + steering cover)",
@@ -123,7 +167,7 @@ export const featuredUpgrades = [
     upgrade: "Bucket-fitted seat covers, mats, and steering cover.",
     result: "Neat finishing with same-day work when feasible.",
     cta: "Ask on WhatsApp",
-    image: "/placeholders/interior.svg",
+    image: imageLibrary.featuredInterior,
   },
   {
     title: "Fog Lamp Upgrade (Hi-Low projector + HID)",
@@ -131,7 +175,7 @@ export const featuredUpgrades = [
     upgrade: "AES Hi-Low projector with HID setup and beam alignment.",
     result: "Clean lighting handled by a calm, knowledgeable mechanic.",
     cta: "Ask on WhatsApp",
-    image: "/placeholders/lighting.svg",
+    image: imageLibrary.featuredLighting,
   },
 ];
 
@@ -155,49 +199,49 @@ export const galleryItems = [
     id: "infotainment-1",
     title: "Infotainment install - clean fitment",
     category: "Infotainment",
-    image: "/placeholders/infotainment.svg",
+    image: imageLibrary.galleryInfotainment,
   },
   {
     id: "interior-1",
     title: "Bucket-fitted seat covers",
     category: "Interior",
-    image: "/placeholders/interior.svg",
+    image: imageLibrary.galleryInterior,
   },
   {
     id: "lighting-1",
     title: "Fog lamp upgrade with alignment",
     category: "Lighting",
-    image: "/placeholders/lighting.svg",
+    image: imageLibrary.galleryLighting,
   },
   {
     id: "accessories-1",
     title: "Rain visor fitted",
     category: "Accessories",
-    image: "/placeholders/exterior.svg",
+    image: imageLibrary.galleryAccessories,
   },
   {
     id: "repair-1",
     title: "Electrical repair diagnosis",
     category: "Repair",
-    image: "/placeholders/repair.svg",
+    image: imageLibrary.galleryRepair,
   },
   {
     id: "interior-2",
     title: "Floor mats fitting",
     category: "Interior",
-    image: "/placeholders/interior.svg",
+    image: imageLibrary.galleryInteriorAlt,
   },
   {
     id: "lighting-2",
     title: "Headlamp upgrade check",
     category: "Lighting",
-    image: "/placeholders/lighting.svg",
+    image: imageLibrary.galleryLightingAlt,
   },
   {
     id: "accessories-2",
     title: "Rear bumper protector",
     category: "Accessories",
-    image: "/placeholders/exterior.svg",
+    image: imageLibrary.galleryAccessoriesAlt,
   },
 ];
 
@@ -259,12 +303,12 @@ export const faqs = [
   },
 ];
 
-export const servicesCatalog = [
+export const servicesCatalog: ServiceSection[] = [
   {
     id: "infotainment",
     title: "Infotainment & In-Car Tech",
     intro: "Clean fitting with basic setup and post-install checks.",
-    image: "/placeholders/infotainment.svg",
+    image: imageLibrary.infotainment,
     items: [
       {
         name: "Infotainment System Installation (Yuemi supported)",
@@ -281,7 +325,7 @@ export const servicesCatalog = [
     id: "interior",
     title: "Interior Works",
     intro: "Neat finishing with bucket fitting and same-day capability.",
-    image: "/placeholders/interior.svg",
+    image: imageLibrary.interior,
     items: [
       {
         name: "Seat Covers Installation (Bucket fitting)",
@@ -315,7 +359,7 @@ export const servicesCatalog = [
     id: "lighting",
     title: "Lighting Upgrades",
     intro: "Upgrade lights with alignment checks and clean installation.",
-    image: "/placeholders/lighting.svg",
+    image: imageLibrary.lighting,
     items: [
       {
         name: "Headlamp Upgrade or Replacement (100W mentioned)",
@@ -341,7 +385,7 @@ export const servicesCatalog = [
     id: "exterior",
     title: "Exterior Accessories",
     intro: "Practical exterior add-ons installed neatly.",
-    image: "/placeholders/exterior.svg",
+    image: imageLibrary.exterior,
     items: [
       {
         name: "Rain Visor",
@@ -367,7 +411,7 @@ export const servicesCatalog = [
     id: "audio",
     title: "Audio Systems",
     intro: "Audio upgrades installed with testing.",
-    image: "/placeholders/audio.svg",
+    image: imageLibrary.audio,
     items: [
       {
         name: "Audio System Upgrades",
@@ -387,7 +431,7 @@ export const servicesCatalog = [
     id: "repair",
     title: "Electrical Repair & Diagnostics",
     intro: "Speciality in repair of car systems and electrical items.",
-    image: "/placeholders/repair.svg",
+    image: imageLibrary.repair,
     items: [
       {
         name: "Electrical and System Repair",
@@ -402,7 +446,7 @@ export const servicesCatalog = [
     id: "packages",
     title: "Upgrade Packages",
     intro: "Bundled upgrades for new cars and refreshes.",
-    image: "/placeholders/infotainment.svg",
+    image: imageLibrary.packages,
     items: [
       {
         name: "New Car Upgrade Package",
@@ -433,19 +477,20 @@ export const beforeAfterShowcase = [
   {
     title: "Infotainment install",
     category: "Infotainment",
-    beforeImage: "/placeholders/before.svg",
-    afterImage: "/placeholders/after.svg",
+    beforeImage: imageLibrary.beforeInfotainment,
+    afterImage: imageLibrary.afterInfotainment,
   },
   {
     title: "Interior combo upgrade",
     category: "Interior",
-    beforeImage: "/placeholders/before.svg",
-    afterImage: "/placeholders/after.svg",
+    beforeImage: imageLibrary.beforeInterior,
+    afterImage: imageLibrary.afterInterior,
   },
   {
     title: "Fog lamp upgrade",
     category: "Lighting",
-    beforeImage: "/placeholders/before.svg",
-    afterImage: "/placeholders/after.svg",
+    beforeImage: imageLibrary.beforeLighting,
+    afterImage: imageLibrary.afterLighting,
   },
 ];
+
